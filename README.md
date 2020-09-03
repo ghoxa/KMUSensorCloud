@@ -139,7 +139,17 @@ GND | 0V 에 해당하는 기준전압
 
 <img width="500" alt="스크린샷 2020-09-03 오후 9 51 45" src="https://user-images.githubusercontent.com/63793178/92117352-0e101f80-ee30-11ea-8143-a442a4bcda48.png" width="10%">
 
-다음과 같은 화면이 나오는데, 이 때, ***스케치 > 라이브러리 포함하기 > .ZIP 라이브러리 추가...*** 로 ~~~~ 의 라이브러리를 모두 추가한다.   
+다음과 같은 화면이 나오는데, 이 때, ***스케치 > 라이브러리 포함하기 > .ZIP 라이브러리 추가...*** 로 **KMUSensorCloud/library/** 의 zip 파일을 모두 추가한다. zip 파일은 다음과 같다.   
+
+```   
+Adafruit_BME280_Library_KMU-master.zip   
+
+Adafruit_Sensor-master.zip   
+
+PMS-master.zip   
+
+SparkFun_ESP8266_AT_Arduino_Library_KMU-master.zip   
+```   
 
 <br/>   
 
@@ -173,5 +183,5 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 
 <br/>   
 
-## 5. ThingSpeak와 통신
-
+## 5. ThingSpeak와 통신   
+### 5.1 ThingSpeak와 
