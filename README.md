@@ -192,11 +192,14 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92125626-31d86300-ee3a-11ea-96c8-a763b5d6a855.jpeg">   
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126047-add2ab00-ee3a-11ea-9246-4f975afaea89.jpeg">   
-<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
 
 <br/>   
 
 ### 5.2 ThingSpeak 데이터 시각화   
+
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
+
+로그인 후  ***Channels > New Channel*** 을 클릭한다.   
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126223-dd81b300-ee3a-11ea-98d6-1f15644b6aec.jpeg">   
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126316-fe4a0880-ee3a-11ea-90f3-728e3cc390e6.jpeg">   
