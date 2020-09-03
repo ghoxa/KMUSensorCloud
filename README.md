@@ -8,6 +8,8 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
 또한 센서 이외에 다른 장치를 부착하여 ThingSpeak, AWS 기반의 웹서버 프로그래밍을 통해 다양한 응용 및 확장이 가능하다. 
 함께 모여 아두이노와 공기질 센서를 조립하고 테스트한 후, 각자 집에 설치하여 ThingSpeak를 통해 데이터를 수집하고 지도에 나타내는 것이 1차 목표이다.   
 
+<br/>   
+
 ## 목차   
 + [1. 저자](#1-저자)   
 + [2. 목표](#2-목표)   
@@ -22,7 +24,9 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
   + [4.4 WiFi 통신 테스트](#44-wifi-통신-테스트)   
     + [4.4.1 포트 확인](#441-포트-확인)   
     + [4.4.2 업로드 및 AT command 실행](#442-업로드-및-at-command-실행)   
-+ [5. ThingSpeak와 통신](#5-thingspeak와-통신) 
++ [5. ThingSpeak와 통신](#5-thingspeak와-통신)   
+
+<br/>   
 
 ## 1. 저자   
 * 황선태 교수님(sthwang@kookmin.ac.kr)   
@@ -31,11 +35,15 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
 * 김호준(hotem1234@naver.com)   
 * 박세원(psw7347@gmail.com)   
 
+<br/>   
+
 ## 2. 목표   
 * 여러 공간의 대기질 센싱 데이터 수집,가시화, 분석, 예측   
 * 첫째, ThingSpeak를 사용한 IoT 센서 플랫폼 구축 방법과 실습   
 * 둘째, IoT Device와 ThingSpeak 연동과 실습    
 * 셋째, 모바일 환경에서 접근하기 위한 웹 어플리케이션 구성   
+
+<br/>   
 
 ## 3. 센서모듈 종류 및 소개   
 ### 3.1 와이파이 모듈(ESP8266)   
@@ -89,6 +97,8 @@ Parameter | Index
 
 _추가참조_: [BOSCH](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/), [BME280 libraries](https://github.com/finitespace/BME280), [Specification](https://wiki.dfrobot.com/Gravity__I2C_BME280_Environmental_Sensor__Temperature,_Humidity,_Barometer__SKU__SEN0236)   
 
+<br/>   
+
 ## 4. 아두이노 연결   
 ### 4.1 아두이노 센서 연결   
 
@@ -114,11 +124,14 @@ GND | 0V 에 해당하는 기준전압
 
 <img width="300" src="https://user-images.githubusercontent.com/63793178/92117915-c2aa4100-ee30-11ea-9b4b-35bbdf728e4d.jpeg">      
 
+<br/>   
 
 ### 4.2 아두이노 설치   
 [https://www.arduino.cc](https://www.arduino.cc/en/Main/Software) 에서 ***SOFTWARE > DOWNLOADS*** 에 들어가, 운영체제에 맞게 설치를 한다.   
 
 <img width="500" alt="스크린샷 2020-09-03 오후 9 40 44" src="https://user-images.githubusercontent.com/63793178/92116122-60e8d780-ee2e-11ea-8919-73051bf37a07.png" width="10%">   
+
+<br/>   
 
 ### 4.3 아두이노에 라이브러리 추가   
 
@@ -128,9 +141,10 @@ GND | 0V 에 해당하는 기준전압
 
 다음과 같은 화면이 나오는데, 이 때, ***스케치 > 라이브러리 포함하기 > .ZIP 라이브러리 추가...*** 로 ~~~~ 의 라이브러리를 모두 추가한다.   
 
+<br/>   
+
 ### 4.4 WiFi 통신 테스트    
 `wificonnect.ino`를 실행해, WiFi 통신을 점검한다.   
-
 <br/>   
 
 #### 4.4.1 포트 확인
@@ -138,6 +152,8 @@ GND | 0V 에 해당하는 기준전압
 <img width="500" alt="스크린샷 2020-09-03 오전 11 54 24" src="https://user-images.githubusercontent.com/63793178/92066252-6e757180-eddc-11ea-86e1-2b39e8d57fc1.png" width="10%">   
 
 상단 메뉴 바의 ***툴 > 포트 > 시리얼 포트*** 에서, 시리얼 포트가 제대로 설정 돼 있는 지 확인한다.   
+
+<br/>   
 
 #### 4.4.2 업로드 및 AT command 실행   
 
@@ -155,7 +171,7 @@ GND | 0V 에 해당하는 기준전압
 모니터에 `AT+ UART_DEF=9600,8,1,0,0`을 입력한다.    
 _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow control) 를 의미한다._   
 
-
+<br/>   
 
 ## 5. ThingSpeak와 통신
 
