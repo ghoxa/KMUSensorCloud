@@ -195,12 +195,13 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92125626-31d86300-ee3a-11ea-96c8-a763b5d6a855.jpeg">   
 
 [https://thingspeak.com](https://thingspeak.com) 에 접속한다.   
+접속 후 ***`GET STARTED FOR FREE`*** 를 클릭한다. 
    
 <br/>   
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126047-add2ab00-ee3a-11ea-9246-4f975afaea89.jpeg">   
 
-접속 후 ***`GET STARTED FOR FREE`*** 를 클릭한다. 회원가입이 되어 있지 않다면 ***`Created one!`*** 을 누르고, 가입이 되어 있다면 해당 이메일로 로그인 한다.
+회원가입이 되어 있지 않다면 ***`Created one!`*** 을 누르고, 가입이 되어 있다면 해당 이메일로 로그인 한다.
 
 <br/>   
 
@@ -212,7 +213,7 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126223-dd81b300-ee3a-11ea-98d6-1f15644b6aec.jpeg">   
 
-보기와 같이 작성하되 ***`Name`*** 에는 본인의 학번, ***`Description`*** 에느 채널을 생성한 날짜를 쓴다.
+보기와 같이 작성하되 ***`Name`*** 에 본인의 학번, ***`Description`*** 에 채널을 생성한 날짜를 쓴다.
 
 <br/>
 
