@@ -222,7 +222,7 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 ***`Link to External Site`*** 에는 `https://air.cs.kookmin.ac.kr/` 를 입력해주고, ***`Show Channel Location`*** 을 체크하고 위도와 경도를 작성한다. 
 이 때, 위도 및 경도는 구글 지도에서 알 수 있다.
 <a href="https://mainia.tistory.com/2404" onclick="return ! window.open(this.href);">[구글지도 참조]</a>를 참조하도록 한다.
-
+<https://mainia.tistory.com/2404>{: target="_blank"}
 <br/>
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126483-33eef180-ee3b-11ea-9adb-4feb09774d36.jpeg">   
