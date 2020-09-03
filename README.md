@@ -17,6 +17,8 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
   + [3.3 온도/습도/기압 센서(BME280)](#33-온도습도기압-센서bme280)   
 + [4. 아두이노 센서 연결](#4-아두이노-센서-연결)
   + [4.1 WiFi 통신 테스트](#41-wifi-통신-테스트)   
+    + [4.1.1 포트 확인](#411-포트-확인)   
+    + [4.1.2 업로드 및 AT command 실행](#412-업로드-및-at-command-실행)   
 + [5. ThingSpeak와 통신](#5-thingspeak와-통신) 
 
 ## 1. 저자   
@@ -85,7 +87,20 @@ Parameter | Index
 _추가참조_: [BOSCH](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/), [BME280 libraries](https://github.com/finitespace/BME280), [Specification](https://wiki.dfrobot.com/Gravity__I2C_BME280_Environmental_Sensor__Temperature,_Humidity,_Barometer__SKU__SEN0236)   
 
 ## 4. 아두이노 센서 연결   
-### 4.1 WiFi 통신 테스트   
+### 4.1 WiFi 통신 테스트    
+`wificonnect.ino`를 실행해, WiFi 통신을 점검한다.   
+#### 4.1.1 포트 확인
+
+<img width="843" alt="스크린샷 2020-09-03 오전 11 54 24" src="https://user-images.githubusercontent.com/63793178/92066252-6e757180-eddc-11ea-86e1-2b39e8d57fc1.png" width="10%">   
+
+상단 메뉴 바의 ***툴 > 포트 > 시리얼 포트*** 에서, 시리얼 포트가 제대로 설정 돼 있는 지 확인한다.   
+
+#### 4.1.2 업로드 및 AT command 실행   
+
+<img width="1040" alt="스크린샷 2020-09-03 오전 11 45 00" src="https://user-images.githubusercontent.com/63793178/92065879-78e33b80-eddb-11ea-82b0-c13cb6a40752.png" width="10%">
+
+***업로드*** 를 클릭한 후, ***툴 > 시리얼 모니터*** 에서, 사진과 같이 ***Both NL & CR*** 로 설정해준 후, ***9600 보드레이트*** 인지 확인한다.   
+확인이 됐다면, `AT` 를 입력한 후, `OK`가 출력되는지 확인한다. `OK`가 출력이 되면 정상이다.   
 
 
 ## 5. ThingSpeak와 통신
