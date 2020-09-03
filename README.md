@@ -25,6 +25,8 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
     + [4.4.1 포트 확인](#441-포트-확인)   
     + [4.4.2 업로드 및 AT command 실행](#442-업로드-및-at-command-실행)   
 + [5. ThingSpeak와 통신](#5-thingspeak와-통신)   
+  + [5.1 ThingSpeak에 로그인](#51-thingspeak에-로그인)   
+  + [5.2 ThingSpeak 데이터 시각화](#52-thingspeak-데이터-시각화)
 
 <br/>   
 
@@ -184,4 +186,24 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 <br/>   
 
 ## 5. ThingSpeak와 통신   
-### 5.1 ThingSpeak와 
+### 5.1 ThingSpeak에 로그인   
+
+[https://thingspeak.com](https://thingspeak.com) 에 접속해 로그인한다.   
+
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92125626-31d86300-ee3a-11ea-96c8-a763b5d6a855.jpeg">   
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126047-add2ab00-ee3a-11ea-9246-4f975afaea89.jpeg">   
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
+
+<br/>   
+
+### 5.2 ThingSpeak 데이터 시각화   
+
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126223-dd81b300-ee3a-11ea-98d6-1f15644b6aec.jpeg">   
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126316-fe4a0880-ee3a-11ea-90f3-728e3cc390e6.jpeg">   
+<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126483-33eef180-ee3b-11ea-9adb-4feb09774d36.jpeg">   
+
+
+
+
+
+
