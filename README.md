@@ -66,6 +66,8 @@ Parameter | Index
 
 _추가참조_:   
 
+<br/>   
+
 ### 3.2 미세먼지 센서(PMS7003m)   
 <img src="https://user-images.githubusercontent.com/63793178/92009149-0a728f00-ed83-11ea-8238-f80b9e00cb11.jpeg" width="25%">   
 
@@ -82,6 +84,8 @@ Parameter | Index
 크기 |  48 x 37 x 12 mm³
 
 _추가참조_:   
+
+<br/>   
 
 ### 3.3 온도/습도/기압 센서(BME280)   
 <img src="https://user-images.githubusercontent.com/63793178/92009502-95ec2000-ed83-11ea-8f62-ba1e85fb941c.jpeg" width="20%">      
