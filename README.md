@@ -192,10 +192,15 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 ## 5. ThingSpeak와 통신   
 ### 5.1 ThingSpeak에 로그인   
 
-[https://thingspeak.com](https://thingspeak.com) 에 접속해 로그인한다.   
-
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92125626-31d86300-ee3a-11ea-96c8-a763b5d6a855.jpeg">   
+
+[https://thingspeak.com](https://thingspeak.com) 에 접속한다.   
+   
+<br/>   
+
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126047-add2ab00-ee3a-11ea-9246-4f975afaea89.jpeg">   
+
+접속 후 ***`GET STARTED FOR FREE`*** 를 클릭한다. 회원가입이 되어 있지 않다면 ***`Created one!`*** 을 누르고, 가입이 되어 있다면 해당 이메일로 로그인 한다.
 
 <br/>   
 
@@ -203,11 +208,24 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
 
-로그인 후  ***Channels > New Channel*** 을 클릭한다.   
+로그인 후  ***`Channels > New Channel`*** 을 클릭한다.   
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126223-dd81b300-ee3a-11ea-98d6-1f15644b6aec.jpeg">   
+
+보기와 같이 작성하되 ***`Name`*** 에는 본인의 학번, ***`Description`*** 에느 채널을 생성한 날짜를 쓴다.
+
+<br/>
+
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126316-fe4a0880-ee3a-11ea-90f3-728e3cc390e6.jpeg">   
+
+***`Link to External Site`*** 에는 `https://air.cs.kookmin.ac.kr/` 를 입력해주고, ***`Show Channel Location`*** 을 체크하고 위도와 경도를 작성한다. 
+이 때, 위도 및 경도는 구글 지도에서 알 수 있다. [구글지도 참조](https://mainia.tistory.com/2404) 를 참조하도록 한다.   
+
+<br/>
+
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126483-33eef180-ee3b-11ea-9adb-4feb09774d36.jpeg">   
+
+아두이노에서 전송된 결과값들이 그래플 표시됨을 확인할 수 있다.   
 
 
 
