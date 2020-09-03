@@ -15,17 +15,20 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
   + [3.1 와이파이 모듈(ESP8266)](#31-와이파이-모듈esp8266)   
   + [3.2 미세먼지 센서(PMS7003m)](#32-미세먼지-센서pms7003m)   
   + [3.3 온도/습도/기압 센서(BME280)](#33-온도습도기압-센서bme280)   
-+ [4. 아두이노 센서 연결](#4-아두이노-센서-연결)
-  + [4.1 WiFi 통신 테스트](#41-wifi-통신-테스트)   
-    + [4.1.1 포트 확인](#411-포트-확인)   
-    + [4.1.2 업로드 및 AT command 실행](#412-업로드-및-at-command-실행)   
++ [4. 아두이노 연결](#4-아두이노-연결)   
+  + [4.1 아두이노 센서 연결](#41-아두이노-센서-연결)
+  + [4.2 아두이노 설치](#42-아두이노-설치)   
+  + [4.3 아두이노에 라이브러리 추가](#43-아두이노에-라이브러리-추가)   
+  + [4.4 WiFi 통신 테스트](#44-wifi-통신-테스트)   
+    + [4.4.1 포트 확인](#441-포트-확인)   
+    + [4.4.2 업로드 및 AT command 실행](#442-업로드-및-at-command-실행)   
 + [5. ThingSpeak와 통신](#5-thingspeak와-통신) 
 
 ## 1. 저자   
 * 황선태 교수님(sthwang@kookmin.ac.kr)   
 * 허대영 교수님(dyheo@kookmin.ac.kr)   
-* 최규연 이사님   
-* 김호준   
+* 최규연 이사님(gychoi@cs.kookmin.ac.kr)   
+* 김호준(hotem1234@naver.com)   
 * 박세원(psw7347@gmail.com)   
 
 ## 2. 목표   
@@ -36,7 +39,7 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
 
 ## 3. 센서모듈 종류 및 소개   
 ### 3.1 와이파이 모듈(ESP8266)   
-<img src="https://user-images.githubusercontent.com/63793178/92008373-0db94b00-ed82-11ea-9255-9d55aec0d4fc.jpeg" width="40%">     
+<img src="https://user-images.githubusercontent.com/63793178/92008373-0db94b00-ed82-11ea-9255-9d55aec0d4fc.jpeg" width="30%">     
 
 **Technical Index**   
 Parameter | Index
@@ -54,7 +57,7 @@ Parameter | Index
 _추가참조_:   
 
 ### 3.2 미세먼지 센서(PMS7003m)   
-<img src="https://user-images.githubusercontent.com/63793178/92009149-0a728f00-ed83-11ea-8238-f80b9e00cb11.jpeg" width="30%">   
+<img src="https://user-images.githubusercontent.com/63793178/92009149-0a728f00-ed83-11ea-8238-f80b9e00cb11.jpeg" width="25%">   
 
 **Technical Index**   
 Parameter | Index
@@ -71,7 +74,7 @@ Parameter | Index
 _추가참조_:   
 
 ### 3.3 온도/습도/기압 센서(BME280)   
-<img src="https://user-images.githubusercontent.com/63793178/92009502-95ec2000-ed83-11ea-8f62-ba1e85fb941c.jpeg" width="25%">      
+<img src="https://user-images.githubusercontent.com/63793178/92009502-95ec2000-ed83-11ea-8f62-ba1e85fb941c.jpeg" width="20%">      
 
 **Technical Index**   
 Parameter | Index
@@ -86,21 +89,72 @@ Parameter | Index
 
 _추가참조_: [BOSCH](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/), [BME280 libraries](https://github.com/finitespace/BME280), [Specification](https://wiki.dfrobot.com/Gravity__I2C_BME280_Environmental_Sensor__Temperature,_Humidity,_Barometer__SKU__SEN0236)   
 
-## 4. 아두이노 센서 연결   
-### 4.1 WiFi 통신 테스트    
-`wificonnect.ino`를 실행해, WiFi 통신을 점검한다.   
-#### 4.1.1 포트 확인
+## 4. 아두이노 연결   
+### 4.1 아두이노 센서 연결   
 
-<img width="843" alt="스크린샷 2020-09-03 오전 11 54 24" src="https://user-images.githubusercontent.com/63793178/92066252-6e757180-eddc-11ea-86e1-2b39e8d57fc1.png" width="10%">   
+<img width="700" src ="https://user-images.githubusercontent.com/63793178/92118804-ede16000-ee31-11ea-8e05-4aa9e468d4ae.png">   
+
+위의 그림과 같이 아두이노 보드와 센서 및 모듈을 각각 연결한다.   
+
+[아두이노 센서 연결](https://air.cs.kookmin.ac.kr/디바이스/law-iot-ta2019) 에서 보다 자세하게 확인할 수 있다.    
+또한 다음과 같이 아두이노 보드에 대한 기본 정보를 알고있으면 좋다.   
+
+<img width = "500" src = "https://user-images.githubusercontent.com/63793178/92121794-a65cd300-ee35-11ea-9603-1be69fd95832.jpeg">   
+
+그림과 같이 각 묶음별로 VCC는 VCC끼리 연결돼 있고, GND는 GND끼리 연결 돼 있다. 따라서 해당 묶음 내에서 어느 위치에 연결해도 무방하다.   
+단, ***PIN*** 은 ***번호에 유의하여 연결***해야 한다.    
+
+Parameter | Index
+:------------ | :-------------
+VCC | 5V 에 해당하는 (+)극 
+GND | 0V 에 해당하는 기준전압   
+
+
+모든 센서와 모듈을 연결 했다면, 아두이노와 컴퓨터를 다음 사진과 같이 케이블로 연결한다.    
+
+<img width="300" src="https://user-images.githubusercontent.com/63793178/92117915-c2aa4100-ee30-11ea-9b4b-35bbdf728e4d.jpeg">      
+
+
+### 4.2 아두이노 설치   
+[https://www.arduino.cc](https://www.arduino.cc/en/Main/Software) 에서 ***SOFTWARE > DOWNLOADS*** 에 들어가, 운영체제에 맞게 설치를 한다.   
+
+<img width="500" alt="스크린샷 2020-09-03 오후 9 40 44" src="https://user-images.githubusercontent.com/63793178/92116122-60e8d780-ee2e-11ea-8919-73051bf37a07.png" width="10%">   
+
+### 4.3 아두이노에 라이브러리 추가   
+
+아두이노가 모두 설치 되면, 아두이노 응용프로그램을 실행한다.   
+
+<img width="500" alt="스크린샷 2020-09-03 오후 9 51 45" src="https://user-images.githubusercontent.com/63793178/92117352-0e101f80-ee30-11ea-8143-a442a4bcda48.png" width="10%">
+
+다음과 같은 화면이 나오는데, 이 때, ***스케치 > 라이브러리 포함하기 > .ZIP 라이브러리 추가...*** 로 ~~~~ 의 라이브러리를 모두 추가한다.   
+
+### 4.4 WiFi 통신 테스트    
+`wificonnect.ino`를 실행해, WiFi 통신을 점검한다.   
+
+<br/>   
+
+#### 4.4.1 포트 확인
+
+<img width="500" alt="스크린샷 2020-09-03 오전 11 54 24" src="https://user-images.githubusercontent.com/63793178/92066252-6e757180-eddc-11ea-86e1-2b39e8d57fc1.png" width="10%">   
 
 상단 메뉴 바의 ***툴 > 포트 > 시리얼 포트*** 에서, 시리얼 포트가 제대로 설정 돼 있는 지 확인한다.   
 
-#### 4.1.2 업로드 및 AT command 실행   
+#### 4.4.2 업로드 및 AT command 실행   
 
-<img width="1040" alt="스크린샷 2020-09-03 오전 11 45 00" src="https://user-images.githubusercontent.com/63793178/92065879-78e33b80-eddb-11ea-82b0-c13cb6a40752.png" width="10%">
+<img width="500" alt="스크린샷 2020-09-03 오전 11 45 00" src="https://user-images.githubusercontent.com/63793178/92065879-78e33b80-eddb-11ea-82b0-c13cb6a40752.png" width="10%">
 
 ***업로드*** 를 클릭한 후, ***툴 > 시리얼 모니터*** 에서, 사진과 같이 ***Both NL & CR*** 로 설정해준 후, ***9600 보드레이트*** 인지 확인한다.   
 확인이 됐다면, `AT` 를 입력한 후, `OK`가 출력되는지 확인한다. `OK`가 출력이 되면 정상이다.   
+
+<br/>   
+
+***3.1 와이파이 모듈(ESP8266)*** 에서 ESP-01 보드의 Default 통신 속도가 115200bps 임을 알 수 있다. 충분히 빠른속도로 가장 흔하게 사용되는 통신속도는 9600bps 이므로 속도를 영구적으로 변경해보자.   
+
+<img width="500" alt="스크린샷 2020-09-03 오후 9 21 53" src="https://user-images.githubusercontent.com/63793178/92114288-8c1df780-ee2b-11ea-8e93-93526da61c7b.png" width="30%">   
+
+모니터에 `AT+ UART_DEF=9600,8,1,0,0`을 입력한다.    
+_참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow control) 를 의미한다._   
+
 
 
 ## 5. ThingSpeak와 통신
