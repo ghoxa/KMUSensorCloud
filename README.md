@@ -26,7 +26,13 @@ This is a project called KMU Crowd Sensor Cloud Air&Home&Web. Copyright © [KOOK
     + [4.4.2 업로드 및 AT command 실행](#442-업로드-및-at-command-실행)   
 + [5. ThingSpeak와 통신](#5-thingspeak와-통신)   
   + [5.1 ThingSpeak에 로그인](#51-thingspeak에-로그인)   
-  + [5.2 ThingSpeak 데이터 시각화](#52-thingspeak-데이터-시각화)
+  + [5.2 ThingSpeak 채널 생성](#52-thingspeak-채널-생성)   
+  + [5.3 아두이노 `main.ino` 실행](#53-아두이노-mainino-실행)    
+    + [5.3.1 코드 수정](#531-코드-수정)   
+  + [5.4 ThingSpeak 데이터 시각화 확인](#54-thingspeak-데이터-시각화-확인)   
+    + [5.4.1 아두이노 시리얼 모니터에서 확인](#541-아두이노-시리얼-모니터에서-확인)   
+    + [5.4.2 ThingSpeak 채널에서 확인](#542-thingspeak-채널에서-확인)   
+  
 
 <br/>   
 
@@ -137,6 +143,11 @@ GND | 0V 에 해당하는 기준전압
 
 <img width="500" alt="스크린샷 2020-09-03 오후 9 40 44" src="https://user-images.githubusercontent.com/63793178/92116122-60e8d780-ee2e-11ea-8919-73051bf37a07.png" width="10%">   
 
+<img width="500" src ="https://user-images.githubusercontent.com/63793178/92210025-f769d700-eec8-11ea-9ffc-ef89819229ae.jpeg">    
+
+위 사진과 같이 ***JUST DOWNLOAD*** 를 클릭한다.
+
+
 <br/>   
 
 ### 4.3 아두이노에 라이브러리 추가   
@@ -155,7 +166,13 @@ Adafruit_Sensor-master.zip
 PMS-master.zip   
 
 SparkFun_ESP8266_AT_Arduino_Library_KMU-master.zip   
-```   
+```     
+
+_참고_   
+
+<img width="600" src = "https://user-images.githubusercontent.com/63793178/92210317-74954c00-eec9-11ea-9aff-29a53fd51bbc.jpeg">   
+
+위와 같이 `.zip` 파일을 다운받으면 된다.   
 
 <br/>   
 
@@ -203,9 +220,9 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 
 회원가입이 되어 있지 않다면 ***`Created one!`*** 을 누르고, 가입이 되어 있다면 해당 이메일로 로그인 한다.
 
-<br/>   
+<br/>    
 
-### 5.2 ThingSpeak 데이터 시각화   
+### 5.2 ThingSpeak 채널 생성   
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
 
@@ -222,11 +239,52 @@ _참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow cont
 ***`Link to External Site`*** 에는 `https://air.cs.kookmin.ac.kr/` 를 입력해주고, ***`Show Channel Location`*** 을 체크하고 위도와 경도를 작성한다. 
 이 때, 위도 및 경도는 구글 지도에서 알 수 있다.
 [구글지도 참조](https://mainia.tistory.com/2404) 를 참조하도록 한다.   
-<br/>
+
+<br/>   
+
+### 5.3 아두이노 ***`main.ino`*** 실행   
+_컴퓨터와 아두이노가 연결 돼 있고, 포트 및 기타 설정이 **4. 아두이노 연결** 과 같이 되어 있는지 확인한다._     
+
+#### 5.3.1 코드 수정   
+
+<img width="500" src="https://user-images.githubusercontent.com/63793178/92211971-3cdbd380-eecc-11ea-9640-2d09cf21c24e.jpeg">   
+
+* `#define SSID   "입력할 곳"` 에 WiFi 모듈과 연결 돼 있는 WiFi의 이름을 입력한다.   
+* `#define PASSWORD   "입력할 곳"` 에 해당 WiFi 의 비밀번호를 입력한다.   
+* `#define SENSOR_NAME  "입력할 곳"` 에 본인의 학번을 입력한다.   
+* `#define API_KEY  "입력할 곳"` 은 다음과 같이 진행한다.   
+
+  [https://thingspeak.com](https://thingspeak.com) 에 접속 후, 위 **5.2 ThingSpeak 채널 생성** 에서 생성한 채널을 클릭한다.   
+
+  <img width="700" alt="스크린샷 2020-09-04 오후 4 44 04" src="https://user-images.githubusercontent.com/63793178/92213206-1c147d80-eece-11ea-94fc-1514c1b33d57.png">   
+  
+  그런 다음, 위 사진과 같이 ***API Keys*** 를 클릭한다.   
+  
+  <img width="500" src="https://user-images.githubusercontent.com/63793178/92215500-d5278780-eecf-11ea-9e72-b75a4aad46d3.jpeg">   
+  
+  ***Write API Key*** 에 해당하는 ***Key*** 를 복사하여 `#define API_KEY  "입력할 곳"` 에 붙여넣는다.   
+  
+  그리고 ***`main.ino`*** 파일을 업로드 한다.
+
+
+### 5.4 ThingSpeak 데이터 시각화 확인   
+
+#### 5.4.1 아두이노 시리얼 모니터에서 확인   
+
+<img width="700" alt="스크린샷 2020-09-04 오후 5 01 30" src="https://user-images.githubusercontent.com/63793178/92215819-51ba6600-eed0-11ea-877e-3ff5325c4272.png">   
+
+아두이노 상단바에서, ***툴 > 시리얼 모니터*** 에서 위와 같이 온도, 습도, 기압, PM 1.0, PM 2.5, PM 10.0 의 수치를 알 수 있다.   
+
+<br/>   
+
+#### 5.4.2 ThingSpeak 채널에서 확인
 
 <img width="700" src = "https://user-images.githubusercontent.com/63793178/92126483-33eef180-ee3b-11ea-9adb-4feb09774d36.jpeg">   
 
-아두이노에서 전송된 결과값들이 그래플 표시됨을 확인할 수 있다.   
+또한, ThingSpeak에서 생성한 ***Channel*** 에서 아두이노에서 전송된 결과값들이 그래프로 표시됨을 확인할 수 있다.   
+
+<br/>   
+
 
 
 
