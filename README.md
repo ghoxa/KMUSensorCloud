@@ -49,9 +49,9 @@ _English verion here : [https://github.com/SeiwonPark/2020_Sensor_Cloud](https:/
 
 ## 2. 목표   
 * 여러 공간의 대기질 센싱 데이터 수집,가시화, 분석, 예측   
-* 첫째, ThingSpeak를 사용한 IoT 센서 플랫폼 구축 방법과 실습   
-* 둘째, IoT Device와 ThingSpeak 연동과 실습    
-* 셋째, 모바일 환경에서 접근하기 위한 웹 어플리케이션 구성   
+* **첫째**, ThingSpeak를 사용한 IoT 센서 플랫폼 구축 방법과 실습   
+* **둘째**, IoT Device와 ThingSpeak 연동과 실습    
+* **셋째**, 모바일 환경에서 접근하기 위한 웹 어플리케이션 구성   
 
 <br/>   
 
