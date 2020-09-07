@@ -10,7 +10,7 @@
 #define HOST_NAME "api.thingspeak.com"
 #define HOST_PORT (80)
 #define API_KEY "본인의 api key 를 입력하세요"
-#define WAIT (30000) //5분
+#define WAIT (300000) //5분
 
 #define DEBUG // 주석시 시리얼출력 없음.
 
