@@ -10,7 +10,7 @@
 #define HOST_NAME "api.thingspeak.com"
 #define HOST_PORT (80)
 #define API_KEY "본인의 api key 를 입력하세요"
-#define WAIT (300000) //5분
+#define WAIT (30000) //5분
 
 #define DEBUG // 주석시 시리얼출력 없음.
 
@@ -22,9 +22,9 @@ PMS::DATA Data;
 
 Adafruit_BME280 Bme; // I2C
 
-unsigned int _temperature = 0;
-unsigned int _humidity = 0;
-unsigned int _pressure = 0;
+float _temperature = 0.00f;
+float _humidity = 0.00f;
+float _pressure = 0.00f;
 unsigned int _pm1_0 = 0; //pm1.0
 unsigned int _pm2_5 = 0; //pm2.5
 unsigned int _pm10 = 0;  //pm10
@@ -236,6 +236,10 @@ void send_data()
 {
 
     int retVal = client.connect(HOST_NAME, HOST_PORT);
+    char temp_temperature[20];
+    char temp_humidity[20];
+    char temp_pressure[20];
+
     if (retVal <= 0)
     {
         Serial.println(F("Failed to connect to server."));
@@ -244,9 +248,13 @@ void send_data()
     }
     digitalWrite(LED_BUILTIN, HIGH); // 서버 연결성공시 led 켜짐
 
-    char *paramTpl = "?api_key=%s&field1=%d&field2=%d&field3=%d&field4=%d&field5=%d&field6=%d"; //보낼 필드명 정의
+    dtostrf(_temperature, 4, 2, temp_temperature);
+    dtostrf(_humidity, 4, 2, temp_humidity);
+    dtostrf(_pressure, 4, 2, temp_pressure);
+
+    char *paramTpl = "?api_key=%s&field1=%s&field2=%s&field3=%s&field4=%d&field5=%d&field6=%d"; //보낼 필드명 정의
     char param[100];                                                                            //param 사이즈 크기 정의
-    sprintf(param, paramTpl, API_KEY, _temperature, _humidity, _pressure, _pm1_0, _pm2_5, _pm10);
+    sprintf(param, paramTpl, API_KEY, temp_temperature, temp_humidity, temp_pressure, _pm1_0, _pm2_5, _pm10);
 
     // This will send the request to the server
     char *headerTpl = "GET /update%s HTTP/1.1\r\n"
@@ -258,6 +266,7 @@ void send_data()
 
     // This will send the request to the server
     client.print(header);
+    //Serial.print(param);
 
     // 서버에서 리턴되는 결과 출력
     //  while (client.available())
