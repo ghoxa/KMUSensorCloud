@@ -118,7 +118,14 @@ _추가참조_: [BOSCH](https://www.bosch-sensortec.com/products/environmental-s
 
 <img width="700" src ="https://user-images.githubusercontent.com/63793178/92118804-ede16000-ee31-11ea-8e05-4aa9e468d4ae.png">   
 
-위의 그림과 같이 아두이노 보드와 센서 및 모듈을 각각 연결한다.   
+위의 그림과 같이 아두이노 보드와 센서 및 모듈을 각각 연결한다.  
+   
+***참고로 BME280을 연결할 때, 다음과 같이 연결한다.***    
+
+<img width = "500" src = "https://user-images.githubusercontent.com/63793178/93861043-e0194f00-fcfa-11ea-854d-c4f70521ecb7.jpeg">    
+
+위 사진과 같이  ***+*** 와 ***VCC*** , ***-*** 와 ***GND*** 를 연결하고, ***C*** 를 ***SCL*** , ***D*** 를 ***SDA*** 에 연결한다.   
+
 
 [아두이노 센서 연결](https://air.cs.kookmin.ac.kr/디바이스/law-iot-ta2019) 에서 보다 자세하게 확인할 수 있다.    
 또한 다음과 같이 아두이노 보드에 대한 기본 정보를 알고있으면 좋다.   
@@ -131,7 +138,11 @@ _추가참조_: [BOSCH](https://www.bosch-sensortec.com/products/environmental-s
 Parameter | Index
 :------------ | :-------------
 VCC | 5V 에 해당하는 (+)극 
-GND | 0V 에 해당하는 기준전압   
+GND | 0V 에 해당하는 기준전압    
+
+
+<br/>   
+마지막으로 팬을 다음과 같이 연결한다. 
 
 
 모든 센서와 모듈을 연결 했다면, 아두이노와 컴퓨터를 다음 사진과 같이 케이블로 연결한다.    
@@ -203,8 +214,8 @@ _참고_
 
 <img width="500" alt="스크린샷 2020-09-03 오후 9 21 53" src="https://user-images.githubusercontent.com/63793178/92114288-8c1df780-ee2b-11ea-8e93-93526da61c7b.png" width="30%">   
 
-모니터에 `AT+ UART_DEF=9600,8,1,0,0`을 입력한다.    
-_참고로, AT + UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow control) 를 의미한다._   
+모니터에 `AT+UART_DEF=9600,8,1,0,0`을 입력한다.    
+_참고로, AT+UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow control) 를 의미한다._   
 
 <br/>   
 
