@@ -124,7 +124,8 @@ _추가참조_: [BOSCH](https://www.bosch-sensortec.com/products/environmental-s
 
 <img width = "500" src = "https://user-images.githubusercontent.com/63793178/93861043-e0194f00-fcfa-11ea-854d-c4f70521ecb7.jpeg">    
 
-위 사진과 같이  ***+*** 와 ***VCC*** , ***-*** 와 ***GND*** 를 연결하고, ***C*** 를 ***SCL*** , ***D*** 를 ***SDA*** 에 연결한다.   
+위 사진과 같이  ***<code>+</code>*** 와 ***<code>VCC</code>*** , ***<code>-</code>*** 와 ***<code>GND</code>*** 를 연결하고, 
+***<code>C</code>*** 를 ***<code>SCL</code>*** , ***<code>D</code>*** 를 ***<code>SDA</code>*** 에 연결한다.   
 
 
 [아두이노 센서 연결](https://air.cs.kookmin.ac.kr/디바이스/law-iot-ta2019) 에서 보다 자세하게 확인할 수 있다.    
@@ -149,14 +150,14 @@ GND | 0V 에 해당하는 기준전압
 
 <img width="500" src = "https://user-images.githubusercontent.com/63793178/93875678-62603e00-fd10-11ea-8686-f08e3b4c79b2.jpeg">   
 
-위와 같이, 아두이노 보드 위의 ***VIN*** 과 팬(Fan)의 ***+(빨간 점퍼 케이블)*** 를 연결하고, 아두이노 보드 위의 ***GND*** 와 팬의 ***-(검정 점퍼 케이블)*** 를 연결한다.   
+위와 같이, 아두이노 보드 위의 ***<code>VIN</code>*** 과 팬(Fan)의 ***<code>+(빨간 점퍼 케이블)</code>*** 를 연결하고, 아두이노 보드 위의 ***<code>GND</code>*** 와 팬의 ***<code>-(검정 점퍼 케이블)</code>*** 를 연결한다.   
 <br/>   
 
 _NOTE: 아두이노에 연결 된 점퍼 케이블의 색이 다른 것은, 길이를 연장하기 위해 점퍼 케이블을 추가로 사용했기 때문이다. 헷갈리지 않기를 바란다._   
 
 <br/>   
 
-또한, 팬의 ***노란 점퍼 케이블*** 은 아두이노 보드의 ***Digital PIN*** (참고로, 위 **4.1 아두이노 연결** 에 나와 있는 사진을 기준으로, 
+또한, 팬의 ***<code>노란 점퍼 케이블</code>*** 은 아두이노 보드의 ***<code>Digital PIN</code>*** (참고로, 위 **4.1 아두이노 연결** 에 나와 있는 사진을 기준으로, 
 아두이노 보드 위의 노란색 PIN이 Digital PIN 이고, 그 밑에 있는 파란색 PIN들이 Analog PIN 이다.)과 연결해, 팬의 rpm을 알 수 있다. 
 이 프로젝트에서는 rpm을 따로 계산하지 않았다.   
 
