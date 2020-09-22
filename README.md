@@ -141,8 +141,10 @@ VCC | 5V 에 해당하는 (+)극
 GND | 0V 에 해당하는 기준전압    
 
 
-<br/>   
-마지막으로 팬을 다음과 같이 연결한다.  
+<br/>    
+
+마지막으로 팬을 다음과 같이 연결한다.   
+
 <br/>   
 
 <img width="500" src = "https://user-images.githubusercontent.com/63793178/93875678-62603e00-fd10-11ea-8686-f08e3b4c79b2.jpeg">   
