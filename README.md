@@ -246,14 +246,14 @@ _참고로, AT+UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow contro
 ## 5. ThingSpeak와 통신   
 ### 5.1 ThingSpeak에 로그인   
 
-<img width="700" src = "https://user-images.githubusercontent.com/63793178/92125626-31d86300-ee3a-11ea-96c8-a763b5d6a855.jpeg">   
+<img width="500" src = "https://user-images.githubusercontent.com/63793178/92125626-31d86300-ee3a-11ea-96c8-a763b5d6a855.jpeg">   
 
 [https://thingspeak.com](https://thingspeak.com) 에 접속한다.   
 접속 후 ***`GET STARTED FOR FREE`*** 를 클릭한다. 
    
 <br/>   
 
-<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126047-add2ab00-ee3a-11ea-9246-4f975afaea89.jpeg">   
+<img width="500" src = "https://user-images.githubusercontent.com/63793178/92126047-add2ab00-ee3a-11ea-9246-4f975afaea89.jpeg">   
 
 회원가입이 되어 있지 않다면 ***`Created one!`*** 을 누르고, 가입이 되어 있다면 해당 이메일로 로그인 한다.
 
@@ -261,7 +261,7 @@ _참고로, AT+UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow contro
 
 ### 5.2 ThingSpeak 채널 생성   
 
-<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
+<img width="500" src = "https://user-images.githubusercontent.com/63793178/92126165-ccd13d00-ee3a-11ea-8daf-46044ea809b6.jpeg">   
 
 로그인 후  ***`Channels > New Channel`*** 을 클릭한다.   
 
@@ -271,7 +271,7 @@ _참고로, AT+UART_DEF = (baudrate),(databits),(stopbits),(parity),(flow contro
 
 <br/>
 
-<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126316-fe4a0880-ee3a-11ea-90f3-728e3cc390e6.jpeg">   
+<img width="500" src = "https://user-images.githubusercontent.com/63793178/92126316-fe4a0880-ee3a-11ea-90f3-728e3cc390e6.jpeg">   
 
 ***`Link to External Site`*** 에는 `https://air.cs.kookmin.ac.kr/` 를 입력해주고, ***`Show Channel Location`*** 을 체크하고 위도와 경도를 작성한다. 
 이 때, 위도 및 경도는 구글 지도에서 알 수 있다.
@@ -293,7 +293,7 @@ _컴퓨터와 아두이노가 연결 돼 있고, 포트 및 기타 설정이 **4
 
   [https://thingspeak.com](https://thingspeak.com) 에 접속 후, 위 **5.2 ThingSpeak 채널 생성** 에서 생성한 채널을 클릭한다.   
 
-  <img width="700" alt="스크린샷 2020-09-04 오후 4 44 04" src="https://user-images.githubusercontent.com/63793178/92213206-1c147d80-eece-11ea-94fc-1514c1b33d57.png">   
+  <img width="500" alt="스크린샷 2020-09-04 오후 4 44 04" src="https://user-images.githubusercontent.com/63793178/92213206-1c147d80-eece-11ea-94fc-1514c1b33d57.png">   
   
   그런 다음, 위 사진과 같이 ***API Keys*** 를 클릭한다.   
   
@@ -308,7 +308,7 @@ _컴퓨터와 아두이노가 연결 돼 있고, 포트 및 기타 설정이 **4
 
 #### 5.4.1 아두이노 시리얼 모니터에서 확인   
 
-<img width="700" alt="스크린샷 2020-09-04 오후 5 01 30" src="https://user-images.githubusercontent.com/63793178/92215819-51ba6600-eed0-11ea-877e-3ff5325c4272.png">   
+<img width="500" alt="스크린샷 2020-09-04 오후 5 01 30" src="https://user-images.githubusercontent.com/63793178/92215819-51ba6600-eed0-11ea-877e-3ff5325c4272.png">   
 
 아두이노 상단바에서, ***툴 > 시리얼 모니터*** 에서 위와 같이 온도, 습도, 기압, PM 1.0, PM 2.5, PM 10.0 의 수치를 알 수 있다.   
 
@@ -316,7 +316,7 @@ _컴퓨터와 아두이노가 연결 돼 있고, 포트 및 기타 설정이 **4
 
 #### 5.4.2 ThingSpeak 채널에서 확인
 
-<img width="700" src = "https://user-images.githubusercontent.com/63793178/92126483-33eef180-ee3b-11ea-9adb-4feb09774d36.jpeg">   
+<img width="500" src = "https://user-images.githubusercontent.com/63793178/92126483-33eef180-ee3b-11ea-9adb-4feb09774d36.jpeg">   
 
 또한, ThingSpeak에서 생성한 ***Channel*** 에서 아두이노에서 전송된 결과값들이 그래프로 표시됨을 확인할 수 있다.   
 
